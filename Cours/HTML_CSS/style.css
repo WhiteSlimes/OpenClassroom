@@ -1,0 +1,53 @@
+body {
+    /* Ici on utilise le sélecteur body pour appliquer une police et une taille par défaut pour les éléments */
+    font-family: 'Manrope', sans-serif;
+    font-size: 1em;
+    background-color: #1F2039;
+}
+
+a{
+    color: #242424;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+em{
+    color: #A5B4FC;
+    font-style: normal;
+}
+h1{
+    font-size: 3.5em;
+    color: #A5B4FC;
+    font-family: 'Montserrat', sans-serif;
+}
+h2{
+    color: #F9F8FF
+}
+p, li{
+    font-size: 1.1em;
+    color: #F9F8FF;
+}
+
+.nav, .footer{
+    background-color: white;
+}
+
+.cta{
+    background: linear-gradient(#8E86B5, #ACAEED);
+    color: white;
+    border-radius: 50px;
+}
+.carre-contenu{
+    border-bottom: 1px solid #A5B4FC;
+    border-right: 1px solid #A5B4FC;
+}
+.cta:hover{
+    background: linear-gradient(#696484, #8788BA);
+    text-decoration: none;
+}
+.lien-icone:hover{
+    opacity: 0.;
+}
+
