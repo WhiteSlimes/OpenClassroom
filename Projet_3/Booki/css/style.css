@@ -25,7 +25,7 @@ nav ul{
     margin-top: 0px;  
 }
 nav li{
-    margin: 16px 43px 0 0;
+    margin: 16px 43px 0 26px;
 }
 nav ul li a{
     color: #000000;
@@ -34,20 +34,118 @@ nav ul li a{
 nav ul li a:hover{
     color: #0065FC;
     border-top: 2px solid #0065FC;
-    padding-top: 22px;
+    padding-top: 21px;
 }
-#ecart{
-    margin-right: 69px;
+
+
+/***** Top with form *****/
+h1{
+    font-size: 22px;
+    margin: 0;
 }
+.top p{
+    font-size: 16px;
+}
+.top form{
+    display: flex;
+    height: 49px;
+    width: 377px;
+}
+.top label i{
+    color: #000000;
+    background-color: #F2F2F2;
+}
+.top label{
+    background-color: #F2F2F2;
+    padding: 15px 18px 16px 18px;
+    border: 1px solid #F2F2F2;
+    border-radius: 15px 0px 0px 15px;
+}
+.top input{
+    border: none;
+    border: 1px solid #F2F2F2;
+    width: 195px;
+    font-size: 18px;
+    color: #000000;
+    font-weight: 700;
+    padding-left: 10px;
+}
+.top input::placeholder{
+    color: #000000;
+    font-weight: 700;
+    text-align: center;
+    font-size: 18px;
+    padding-left: -10px;
+    border: none;
+}
+.submit{
+    background-color: #0065FC;
+    font-size: 18px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    width: 132px;
+    border-radius: 0px 15px 15px 0px;
+    cursor: pointer;
+    padding: 14px 16px;
+}
+#research-button-phone{
+    display: none;
+}
+.filter{
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+}
+.filter p{
+    font-weight: 700;
+    font-size: 18px;
+}
+.filter ul{
+    display: flex;
+    list-style: none;
+    margin: 0 0 0 15px;
+    padding: 0;
+}
+.filter li{
+    margin-right: 15px;
+}
+.filter a{
+    text-decoration: none;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+    color: #000000;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 15px 19px 15px 19px;
+}
+.filter i{
+    margin-right: 11px;
+}
+.filter a:hover{
+    background: #DEEBFF;
+}
+.top span i{
+    border: 1px solid #D9D9D9;
+    padding: 7px 12px;
+    border-radius: 25px;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
 
 .fa-solid {
     color: var(--main-color);
 }
 
-body {
-    /**display: flex;
-    justify-content: center;**/
-}
+
 
 .main-container {
     width: 100%;
