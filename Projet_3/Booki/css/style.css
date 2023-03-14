@@ -131,16 +131,6 @@ h1{
     border-radius: 25px;
     margin-right: 10px;
 }
-
-
-
-
-
-
-
-
-
-
 .fa-solid {
     color: var(--main-color);
 }
@@ -196,9 +186,49 @@ h1{
 }
 
 /****** Hebergements ***********/
+.hebergements h2{
+    margin: 0;
+    font-size: 22px;
+}
 .hebergements {
     width: 65%;
 }
+.hebergements-cards-1, .hebergements-cards-2{
+    display: flex;
+    margin-top: 30px;
+}
+.hebergements-cards-1 .card, .hebergements-cards-2 .card{
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.hebergements-cards-1 img, .hebergements-cards-2 img{
+    width: 240px;
+    height: 114px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.hebergements-cards-1 .card-content, .hebergements-cards-2 .card-content{
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+.hebergements-cards-1 .card-title, .hebergements-cards-2 .card-title{
+    margin: 0px
+}
+.hebergements a{
+    display: flex;
+    text-decoration: none;
+    margin-top: 30px;
+    font-size: 18px;
+    color: #000000;
+    font-weight: 700;
+}
+
+
 
 /****** Populaires ***********/
 .populaires {
@@ -214,6 +244,7 @@ h1{
 .populaires-cards .card {
     display: flex;
     margin-top: 33px;
+    cursor: pointer;
 }
 
 .populaires-cards img {
