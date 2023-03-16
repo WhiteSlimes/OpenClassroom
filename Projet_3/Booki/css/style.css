@@ -43,7 +43,11 @@ h1{
     font-size: 22px;
     margin: 0;
 }
+.top{
+    margin-bottom: 35px;
+}
 .top p{
+    margin: 8px 0 35px 0;
     font-size: 16px;
 }
 .top form{
@@ -94,7 +98,7 @@ h1{
 .filter{
     display: flex;
     align-items: center;
-    margin-top: 35px;
+    margin: 35px 0;
 }
 .filter p{
     font-weight: 700;
@@ -108,8 +112,13 @@ h1{
 }
 .filter li{
     margin-right: 15px;
+    color: #000000;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 15px 0px;
 }
 .filter a{
+    margin-top: 35px;
     text-decoration: none;
     border: 2px solid #D9D9D9;
     border-radius: 25px;
@@ -124,11 +133,17 @@ h1{
 .filter a:hover{
     background: #DEEBFF;
 }
+.filter p{
+    margin: 0;
+}
 .top span i{
     border: 1px solid #D9D9D9;
     padding: 7px 12px;
     border-radius: 25px;
     margin-right: 10px;
+}
+#info{
+    margin: 0;
 }
 .fa-solid {
     color: var(--main-color);
