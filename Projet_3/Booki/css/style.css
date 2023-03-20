@@ -104,34 +104,30 @@ h1{
     font-weight: 700;
     font-size: 18px;
 }
-.filter ul{
+.buttons{
     display: flex;
-    list-style: none;
-    margin: 0 0 0 15px;
-    padding: 0;
+    flex-direction: row;
 }
-.filter li{
-    margin-right: 15px;
-    color: #000000;
-    font-weight: 700;
-    font-size: 17px;
-    padding: 15px 0px;
+.btn-filter{
+    display: flex;
+    border: 2px solid #D9D9D9;
+    font-weight: bold;
+    border-radius: 30px;
+    margin-left: 15px;
+    align-items: center;
+    justify-content: center;
+    padding-right: 15px;
+}
+.btn-filter:hover{
+    background: #DEEBFF;
+    cursor: pointer;
+}
+.btn-filter .fa-money-bill-wave, .fa-person, .fa-heart, .fa-fire{
+    padding: 14px;
 }
 .filter a{
-    margin-top: 35px;
     text-decoration: none;
-    border: 2px solid #D9D9D9;
-    border-radius: 25px;
     color: #000000;
-    font-weight: 700;
-    font-size: 17px;
-    padding: 15px 19px 15px 19px;
-}
-.filter i{
-    margin-right: 11px;
-}
-.filter a:hover{
-    background: #DEEBFF;
 }
 .filter p{
     margin: 0;
@@ -302,16 +298,20 @@ h1{
 }
 
 /****** Activités ***********/
+.activites{
+    margin-bottom: 65px;
+}
 .activites h2{
     margin-top: 65px;
     margin-bottom: 30px;
 }
 .activites-card {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 30px;
 }
 .activites-card .cards{
-    margin-right: 30px;
     width: 23%;
     cursor: pointer;
 }
@@ -321,7 +321,8 @@ h1{
     border-radius: 20px 20px 0px 0px;
 }
 .activites h3{
-    margin: 20px 19px;
+    padding: 20px 19px;
+    margin: 0px;
 }
 .activites a{
     text-decoration: none;
@@ -330,27 +331,28 @@ h1{
 
 /****** Footer ***********/
 footer{
-    margin-top: 65px;
-    background-color: var(--main-bg-color);
     display: flex;
-    justify-content: flex-start;
-    padding-left: 20px;
-    align-items: center;
+    justify-content: center;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: var(--main-bg-color);
+    padding: 20px 0;
+}
+footer a{
+    text-decoration: none;
+    color: #000000;
 }
 footer h4 {
-    margin-bottom: 15px;
+    margin: 0 0 10px 0;
 }
-
 footer p {
     margin: 0;
     margin-bottom: 15px;
 }
-footer a {
-    text-decoration: none;
-    color: black;
-}
-.footer-left, .footer-middle{
-    margin-right: 250px;
+.footer-left, .footer-middle, .footer-right{
+    min-width: 30%;
+    min-height: 100px;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -358,6 +360,21 @@ footer a {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+    .filter {
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        align-items: baseline;
+    }
+    .buttons{
+        margin-top: 20px;
+        display: inline-flex;
+        width: 120%;
+    }
+    .btn-filter{
+        margin-left: 0px;
+        margin-right: 15px;
+    }
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -388,9 +405,12 @@ footer a {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+    .cards img{
+        height: 200px;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
     /* ... */
 }
