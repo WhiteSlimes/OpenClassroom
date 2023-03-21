@@ -418,5 +418,59 @@ footer p {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 768px) {
-    /* ... */
+    /* Header */
+    .main-container{
+        padding: 0px;
+    }
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+    nav img{
+        margin: 30px 0; 
+    }
+    nav ul{
+        justify-content: space-around;
+        padding: 0px;
+        width: 100%;
+        margin: 0px;
+    }
+    nav ul li{
+        display: flex;
+        justify-content: center;
+        margin: 0px;
+        width: 50%;
+        border-bottom: 2px solid #F2F2F2;
+        padding-bottom: 15px;
+    }
+    nav ul li:hover{
+        padding-bottom: 15px;
+        border-bottom: 2px solid #0065FC;
+    }
+    nav ul li a:hover{
+        padding-top: 0px;
+        border-top: none;
+    }
+
+    /* Top */
+    main{
+        padding: 0 20px;
+    }
+    .top{
+        margin-top: 30px;
+    }
+    button span{
+        display: none;
+    }
+    #research-button-phone{
+        display: inline;
+        color: white;
+    }
+    .submit{
+        padding: 16px;
+        width: auto;
+        border-radius: 15px;
+    }
+    
+
 }
