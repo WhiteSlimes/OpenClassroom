@@ -488,6 +488,11 @@ footer p {
         margin: 0px;
         width: 162.5px;
     }
+    #info{
+        display: flex;
+    }
+
+    /*** Hebergement and Populaires ***/
     .hebergements{
         background-color: transparent;
     }
