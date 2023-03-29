@@ -497,10 +497,13 @@ footer p {
     .hebergements-and-populaires section{
         padding: 30px 20px;
         border-radius: 0px;
+        background-color: white;
+    }
+    .hebergements-and-populaires .populaires{
+        background-color: var(--main-bg-color)
     }
     .populaires{
         margin: 0;
-        
     }
     .populaires-cards{
         flex-direction: column;
