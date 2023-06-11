@@ -16,22 +16,20 @@ const slides = [
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
-
+// Sélection des éléments dans le HTML 
 const arrowLeft = document.querySelector('.arrow_left');
 const arrowRight = document.querySelector('.arrow_right');
 const dots = document.querySelector('.dots');
 const image = document.querySelector('.banner-img');
 const text = document.querySelector('.banner-txt');
+// Variable pour le slide sur lequel on se trouve
 let currentSlide = 0;
 
-arrowLeft.addEventListener('click', function(){
-	nextSlideLeft();
-});
-arrowRight.addEventListener('click', function(){
-	nextSlideRight();
-});
+arrowLeft.addEventListener('click', () => changeSlide(-1));
 
-for(let i =0; i < slides.length; i++){
+arrowRight.addEventListener('click', () => changeSlide(1));
+
+for(let i = 0; i < slides.length; i++){
 	const dot = document.createElement('span');
 	dot.classList.add('dot')
 	if(i === 0){
@@ -39,32 +37,18 @@ for(let i =0; i < slides.length; i++){
 	}
 	dots.appendChild(dot);
 }
-
-function nextSlideRight(){
-	if(currentSlide === slides.length - 1){
-		currentSlide = 0;
-	}else{
-		currentSlide++;
-	}
-	image.src = "./assets/images/slideshow/" + slides[currentSlide].image;
-	text.innerHTML = slides[currentSlide].tagLine;
+function changeSlide(step){
+	currentSlide = (currentSlide + step + slides.length) % slides.length;
+	updateSlide();
 	updateDots();
 }
-function nextSlideLeft(){
-	if(currentSlide === 0){
-		currentSlide = slides.length - 1;
-	}else{
-		currentSlide--;
-	}
-	image.src = "./assets/images/slideshow/" + slides[currentSlide].image;
+function updateSlide(){
+	image.src = `./assets/images/slideshow/${slides[currentSlide].image}`;
 	text.innerHTML = slides[currentSlide].tagLine;
-	updateDots();
 }
 
 function updateDots(){
-	const allDots = document.querySelectorAll('.dot')
-	for (let i = 0; i < allDots.length; i++){
-		allDots[i].classList.remove('dot_selected');
-	}
+	const allDots = document.querySelectorAll('.dot');
+	allDots.forEach(dot => dot.classList.remove('dot_selected'));
 	allDots[currentSlide].classList.add('dot_selected');
 }
